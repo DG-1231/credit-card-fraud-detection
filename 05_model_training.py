@@ -12,7 +12,7 @@ y_train = pd.read_csv("outputs/y_train_smote.csv")["Class"].values
 X_test = pd.read_csv("outputs/X_test.csv")
 y_test = pd.read_csv("outputs/y_test.csv")["Class"].values
 
-print("✅ Data Loaded Successfully")
+print("Data Loaded Successfully")
 print("X_train:", X_train.shape)
 print("y_train:", y_train.shape)
 print("X_test:", X_test.shape)
@@ -21,7 +21,7 @@ print("y_test:", y_test.shape)
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 
-print("\n================ Logistic Regression ================")
+print("===== Logistic Regression =====")
 
 lr = LogisticRegression(max_iter=2000)
 lr.fit(X_train, y_train)
@@ -35,7 +35,7 @@ print("ROC-AUC:", roc_auc_score(y_test, y_prob_lr))
 
 from sklearn.ensemble import RandomForestClassifier
 
-print("\n================ Random Forest ================")
+print("===== Random Forest =====")
 
 rf = RandomForestClassifier(
     n_estimators=300,
@@ -54,7 +54,7 @@ print("ROC-AUC:", roc_auc_score(y_test, y_prob_rf))
 
 from xgboost import XGBClassifier
 
-print("\n================ XGBoost ================")
+print("===== XGBoost =====")
 
 xgb_model = XGBClassifier(
     n_estimators=400,
