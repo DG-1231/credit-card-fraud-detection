@@ -23,8 +23,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Scale Amount column
 scaler = StandardScaler()
-X_train["Amount"] = scaler.fit_transform(X_train[["Amount"]])
-X_test["Amount"] = scaler.transform(X_test[["Amount"]])
+X_train.loc[:, "Amount"] = scaler.fit_transform(X_train[["Amount"]])
+X_test.loc[:, "Amount"] = scaler.transform(X_test[["Amount"]])
 
 # Save files
 X_train.to_csv("outputs/X_train.csv", index=False)
@@ -32,7 +32,7 @@ X_test.to_csv("outputs/X_test.csv", index=False)
 y_train.to_csv("outputs/y_train.csv", index=False)
 y_test.to_csv("outputs/y_test.csv", index=False)
 
-print("✅ Preprocessing completed")
+print("Preprocessing completed")
 print("Train shape:", X_train.shape)
 print("Test shape:", X_test.shape)
 
