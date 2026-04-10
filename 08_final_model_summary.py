@@ -44,7 +44,7 @@ models = {
 rows = []
 
 for name, model in models.items():
-    print(f"Training {name}...")
+    print(f"Training {name}")
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
@@ -77,5 +77,5 @@ for name, model in models.items():
 results_df = pd.DataFrame(rows).sort_values(by="F1_Fraud", ascending=False)
 results_df.to_csv("outputs/final_results/final_model_comparison.csv", index=False)
 
-print("\n✅ Saved: outputs/final_results/final_model_comparison.csv")
+print("Saved: outputs/final_results/final_model_comparison.csv")
 print(results_df)
