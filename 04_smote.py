@@ -6,7 +6,7 @@ X_train = pd.read_csv("outputs/X_train.csv")
 y_train = pd.read_csv("outputs/y_train.csv")
 
 print("Original class distribution:")
-print(y_train.value_counts())
+print(y_train["Class"].value_counts())
 
 # Apply SMOTE
 smote = SMOTE(random_state=42)
@@ -20,5 +20,5 @@ y_resampled = pd.DataFrame(y_resampled, columns=["Class"])
 X_resampled.to_csv("outputs/X_train_smote.csv", index=False)
 y_resampled.to_csv("outputs/y_train_smote.csv", index=False)
 
-print("\nAfter SMOTE:")
-print(y_resampled.value_counts())
+print("After SMOTE:")
+print(y_resampled["Class"].value_counts())
