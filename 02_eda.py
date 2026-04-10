@@ -2,13 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# Create folder for saving figures
+
 os.makedirs("outputs/figures", exist_ok=True)
 
 # Load dataset
 df = pd.read_csv("data/creditcard.csv")
-
-print("===== BASIC STATISTICS =====")
 print(df.describe())
 
 # -----------------------
@@ -55,4 +53,4 @@ plt.ylabel("Frequency")
 plt.savefig("outputs/figures/time_distribution.png")
 plt.close()
 
-print("✅ EDA figures saved to outputs/figures/")
+print("EDA figures saved to outputs/figures/")
