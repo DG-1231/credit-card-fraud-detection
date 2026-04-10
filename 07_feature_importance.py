@@ -50,5 +50,5 @@ plt.tight_layout()
 plt.savefig("outputs/feature_analysis/top15_feature_importance.png")
 plt.close()
 
-print("✅ Feature importance analysis completed.")
+print("Feature importance analysis completed.")
 print("Saved in outputs/feature_analysis/")
