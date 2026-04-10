@@ -46,7 +46,7 @@ plt.figure()
 results = []
 
 for name, model in models.items():
-    print(f"Training {name}...")
+    print(f"Training {name}")
     model.fit(X_train, y_train)
 
     # Predictions
@@ -81,4 +81,4 @@ plt.close()
 # Save AUC results
 pd.DataFrame(results).to_csv("outputs/visuals/roc_auc_summary.csv", index=False)
 
-print("✅ Visual results saved in outputs/visuals/")
+print("Visual results saved in outputs/visuals/")
