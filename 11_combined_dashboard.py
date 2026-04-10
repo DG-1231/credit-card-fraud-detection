@@ -6,7 +6,7 @@ import matplotlib.image as mpimg
 dashboard_dir = "outputs/dashboard"
 output_path = "outputs/dashboard/combined_dashboard.png"
 
-# Image files (must exist already)
+# Image files
 images = {
     "Fraud Distribution": "fraud_distribution.png",
     "Confusion Matrix": "confusion_matrix.png",
@@ -20,7 +20,7 @@ for title, fname in images.items():
     path = os.path.join(dashboard_dir, fname)
     loaded[title] = mpimg.imread(path)
 
-# Create combined dashboard (2x2)
+# Creating a combined dashboard 
 fig, axes = plt.subplots(2, 2, figsize=(16, 10))
 fig.suptitle("Credit Card Fraud Detection — Python Dashboard Summary", fontsize=18)
 
