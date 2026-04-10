@@ -22,7 +22,7 @@ y_test = pd.read_csv("outputs/y_test.csv")["Class"].values
 # -------------------------
 # Train Random Forest
 # -------------------------
-print("Training Random Forest...")
+print("Training Random Forest")
 rf = RandomForestClassifier(n_estimators=300, random_state=42, n_jobs=-1)
 rf.fit(X_train, y_train)
 
@@ -59,7 +59,7 @@ results = pd.DataFrame(rows)
 
 # Save table
 results.to_csv("outputs/threshold_analysis/random_forest_threshold_results.csv", index=False)
-print("✅ Saved: outputs/threshold_analysis/random_forest_threshold_results.csv")
+print("Saved: outputs/threshold_analysis/random_forest_threshold_results.csv")
 print(results)
 
 # -------------------------
@@ -77,4 +77,4 @@ plt.tight_layout()
 plt.savefig("outputs/threshold_analysis/threshold_tradeoff_plot.png")
 plt.close()
 
-print("✅ Saved: outputs/threshold_analysis/threshold_tradeoff_plot.png")
+print("Saved: outputs/threshold_analysis/threshold_tradeoff_plot.png")
