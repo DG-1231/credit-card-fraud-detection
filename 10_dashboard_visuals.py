@@ -74,4 +74,4 @@ plt.tight_layout()
 plt.savefig("outputs/dashboard/probability_distribution.png")
 plt.close()
 
-print("✅ Dashboard visuals saved in outputs/dashboard/")
+print("Dashboard visuals saved in outputs/dashboard/")
