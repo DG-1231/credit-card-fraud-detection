@@ -36,4 +36,4 @@ plt.tight_layout(rect=[0, 0, 1, 0.95])
 plt.savefig(output_path, dpi=200)
 plt.close()
 
-print(f"✅ Combined dashboard saved to: {output_path}")
+print(f"Combined dashboard saved to: {output_path}")
