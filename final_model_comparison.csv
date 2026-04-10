@@ -1,0 +1,4 @@
+Model,Precision_Fraud,Recall_Fraud,F1_Fraud,ROC_AUC,TP,FP,FN,TN
+Random Forest,0.8265,0.8265,0.8265,0.9829,81,17,17,56847
+XGBoost,0.6391,0.8673,0.7359,0.983,85,48,13,56816
+Logistic Regression,0.1295,0.9082,0.2268,0.9761,89,598,9,56266
