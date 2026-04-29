@@ -119,7 +119,7 @@ feat_names = importances.index.tolist()
 feat_vals = importances.values
 
 # -----------------------
-# FIGURE LAYOUT (FIXED OVERLAPS)
+# FIGURE LAYOUT 
 # -----------------------
 fig = plt.figure(figsize=(20, 12), dpi=160)
 
